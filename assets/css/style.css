@@ -50,7 +50,7 @@ body {
 }
 
 .selecaoMoedas {
-    height: 1.75rem;
+    height: 2.75rem;
     width: 20rem;
     cursor: pointer;
     outline: none;
@@ -71,7 +71,8 @@ body {
 .campos input {
     margin: 1rem;
     width: 12rem;
-    height: 1.5rem;
+    height: 2.5rem;
+    font-size: 16px;
     background-color: rgb(37, 37, 37);
     color: rgb(179, 176, 176);
     outline: none;
@@ -87,8 +88,8 @@ body {
 }
 
 .btn {
-    width: 5rem;
-    height: 2rem;
+    width: 6rem;
+    height: 3rem;
     border: none;
     color: white;
     cursor: pointer;
@@ -96,8 +97,8 @@ body {
 }
 
 .btn:hover {
-    width: 5.5rem;
-    height: 2.5rem;
+    width: 6.5rem;
+    height: 3.5rem;
     border: none;
     color: black;
     font-weight: bold;
