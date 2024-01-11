@@ -83,7 +83,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 7rem;
+    height: 5rem;
 }
 
 .btn {
@@ -103,4 +103,16 @@ body {
     font-weight: bold;
     cursor: pointer;
     background-color: rgb(209, 207, 207);
+}
+
+a {
+    color: rgb(165, 163, 163);
+    text-decoration: none;
+    font-size: smaller;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-size: small;
 }
