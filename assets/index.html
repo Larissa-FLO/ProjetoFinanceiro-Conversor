@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,500;9..40,600;9..40,700&family=Exo+2:wght@300;500;700&family=Quicksand:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Conversor</title>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Conversor de Moedas</h1>
+        </div>
+        <div class="main">
+            <div class="seletor">
+                <select name="moedas" class="selecaoMoedas">
+                    <option value="0">Selecione a moeda para conversão</option>
+                    <option value="BTC-BRL">Bitcoin</option>
+                    <option value="USD-BRL">Dólar</option>
+                    <option value="EUR-BRL">Euro</option>
+                    <option value="JPY-BRL">Iene Japonês</option>
+                    <option value="GBP-BRL">Libra Esterlina</option>
+                    <option value="ARS-BRL">Peso Argentino</option>
+                    <option value="CNY-BRL">Yuan Chinês</option>
+                </select>
+            </div>
+
+            <div class="campos">
+                <input type="text" class="valorEntrada" id="entrada" placeholder="Insira o valor em reais">
+                <input type="text" class="valorSaida" id="saida" readonly>
+            </div>
+
+            <div class="button">
+                <button class="btn" onclick="buscarDados()">Converter</button>
+            </div>
+
+            <!-- <div class="grafico">
+                <canvas id="grafico1" style="width: 300px; height: 300px;">
+                    <script>
+                        async function dadosGrafico() {
+                            moeda = document.querySelector(".selecaoMoedas").value
+                            let m = await fetch(`https://economia.awesomeapi.com.br/json/daily/${moeda}/10`).then(Response => Response.json());
+                            console.log(m);
+                            variacaoMoeda(m);
+                        }
+
+                        let ultimasCotacoes;
+
+                        function variacaoMoeda(m) {
+                            ultimasCotacoes = [m[0].ask, m[1].ask, m[2].ask, m[3].ask, m[4].ask, m[5].ask, m[6].ask, m[7].ask, m[8].ask, m[9].ask];
+                            console.log(ultimasCotacoes);
+                        }
+
+                        
+
+                        const ctx = document.getElementById('grafico1');
+                        new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                                datasets: [{
+                                    label: 'Fechamento da moeda nos últimos 10 dias',
+                                    data: ultimasCotacoes,
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+
+                    </script>
+                </canvas>
+            </div> -->
+
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
+</html>
